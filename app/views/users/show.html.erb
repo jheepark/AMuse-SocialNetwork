@@ -1,0 +1,7 @@
+<h1><%= @user.name %></h1>
+  <%= image_tag @user.image, :class =>'feature' %>
+
+<div class="controls">
+  <%= link_to "Edit Profile", edit_user_path(@user)%>
+  <%= link_to "Delete Profile", @user, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
+</div>
