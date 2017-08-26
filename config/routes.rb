@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'session/new'
-
-  get 'users/new'
+  get 'photos/home'
 
 root :to => 'pages#home'
 resources :users
+resources :artworks
+resources :photos
 
 get '/login' => 'session#new'
 post '/login' => 'session#create'

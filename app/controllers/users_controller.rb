@@ -22,6 +22,10 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
   end
 
+  def show
+    @user = User.find params[:id]
+  end
+
   def update
     user = @current_user
     user = User.find params[:id]
@@ -29,13 +33,9 @@ class UsersController < ApplicationController
     redirect_to user
   end
 
-  def show
-    @user = User.find params[:id]
-  end
-
   def destroy
     user = User.find params[:id]
-    movie.destroy
+    user.destroy
     redirect_to root_path
   end
 

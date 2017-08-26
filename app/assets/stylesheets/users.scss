@@ -1,3 +1,63 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  max-width: 960px;
+  background-color: rgb(255, 204, 213);
+  text-align: center;
+}
+
+nav {
+  background-color: black;
+  padding: 10px;
+  text-align: right;
+  margin-right: 0;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+nav a:hover {
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+}
+
+img.allartworks:hover {
+  box-sizing: border-box;
+  border-color: yellow;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.controls a{
+  color: black;
+}
+
+.controls a:hover{
+  color:white;
+  background-color: black;
+  padding: 2px;
+}
+
+.usersall {
+  height: 160px;
+}
+
+.allartworks {
+  height: 160px;
+}
+
+.feature {
+  height: 300px;
+}
+
+.allphotos {
+  height: 160px;
+}
+fieldset {
+  border: none;
+}

@@ -1,0 +1,8 @@
+  <%= image_tag @artwork.image, :class =>'feature' %>
+
+<% if @current_user.id == @artwork.user_id %>
+  <div class="controls">
+    <%= link_to "Edit Artwork", edit_artwork_path(@artwork)%>
+    <%= link_to "Delete Artwork", @artwork, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
+   </div>
+<% end %>

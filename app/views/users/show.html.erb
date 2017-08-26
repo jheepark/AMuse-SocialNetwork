@@ -1,7 +1,18 @@
 <h1><%= @user.name %></h1>
   <%= image_tag @user.image, :class =>'feature' %>
-
+<% if @current_user.id == @user.id %>
 <div class="controls">
   <%= link_to "Edit Profile", edit_user_path(@user)%>
   <%= link_to "Delete Profile", @user, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
 </div>
+<% end %>
+
+<h1> Artworks </h1>
+<% @user.artworks.each do |a| %>
+  <%= link_to (image_tag a.image, :class => 'allartworks'), a %>
+<% end %>
+
+<h1> Photos </h1>
+  <% @user.photos.each do |p| %>
+    <%= link_to (image_tag p.image, :class => 'allphotos'), p %>
+  <% end %>

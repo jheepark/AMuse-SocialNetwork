@@ -1,0 +1,15 @@
+<%= image_tag @photo.image, :class =>'feature' %>
+
+<% if @current_user.id == @photo.user_id %>
+<div class="controls">
+  <%= link_to "Edit Photo", edit_photo_path(@photo)%>
+  <%= link_to "Delete Photo", @photo, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
+ </div>
+<% end %>
+
+<% unless @current_user.id == @photo.user_id %>
+<div class="controls">
+  <p> Does this image inspire you?</p>
+  <%= link_to "Upload Your Artwork", new_artwork_path%>
+ </div>
+<% end %>
