@@ -1,1 +1,8 @@
 <h1>coming soon</h1>
+<%= form_for @artwork do |f| %>
+<fieldset>
+  <%= f.label :image, "Image URL" %>
+  <%= f.url_field :image, :placeholder => "http..." %>
+</fieldset>
+<%= f.submit "Upload!" %>
+<% end %>
