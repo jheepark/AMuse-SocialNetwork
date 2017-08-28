@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .artworkshow {
   height: 500px;
+  margin-bottom: 50px;
 }
 
 .allartworks {
@@ -14,4 +15,17 @@ img.allartworks:hover {
   border-color: rgb(0, 209, 255);
   border-width: 5px;
   border-style: solid;
+}
+
+.artworkcontrols a {
+  margin-top: 40px;
+  margin-left: 20px;
+  border: 1px solid white;
+}
+
+.artworkcontrols a:hover {
+  border-color: rgb(0, 209, 255);
+  background: #3494E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EC6EAD, #3494E6);
 }

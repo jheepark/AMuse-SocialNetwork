@@ -25337,3 +25337,1026 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 251ms (Views: 219.2ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-28 12:34:10 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (167.8ms)
+Completed 200 OK in 807ms (Views: 522.7ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 12:34:14 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (40.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (105.1ms)
+Completed 200 OK in 669ms (Views: 442.8ms | ActiveRecord: 40.1ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2017-08-28 12:34:16 +1000
+Processing by ArtworksController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering artworks/index.html.erb within layouts/application
+  [1m[36mArtwork Load (19.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  Rendered artworks/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 145ms (Views: 103.5ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-28 12:34:17 +1000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mArtwork Load (2.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 11]]
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 239ms (Views: 207.2ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-08-28 12:34:19 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mPhoto Load (3.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 502ms (Views: 375.7ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:34:22 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (238.3ms)
+Completed 200 OK in 644ms (Views: 565.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:35:07 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (87.3ms)
+Completed 500 Internal Server Error in 464ms (ActiveRecord: 13.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 0..3)):
+    17:         <%= link_to 'Community', users_path %>
+    18:         <%= link_to "Profile Page", user_path(@current_user)%>
+    19:         <%= link_to "Edit profile", edit_user_path(@current_user)%>
+    20:         <%= link_to "Sign out", image_tag(@current_user.image, :class => 'thumb'), login_path, :method => 'delete'%>
+    21:         <%= link_to "Sign out #{@current_user.name}", login_path, :method => 'delete'%>
+    22:         <% else %>
+    23:         <%= link_to 'Sign up', new_user_path %>
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__2008804500844202959_70349748061720'
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:35:28 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (43.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (231.9ms)
+Completed 500 Internal Server Error in 532ms (ActiveRecord: 45.4ms)
+
+
+  
+SyntaxError (/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+thumb'), "Sign out" login_path, :method => 'delete');@output
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+gn out" login_path, :method => 'delete');@output_buffer.safe
+                              ^):
+  
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:35:48 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (80.0ms)
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 18.2ms)
+
+
+  
+SyntaxError (/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+e, :class => 'thumb', sign out) login_path, :method => 'dele
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+gn out) login_path, :method => 'delete');@output_buffer.safe
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting keyword_end
+gin_path, :method => 'delete');@output_buffer.safe_append='
+                              ^):
+  
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting keyword_end
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:35:50 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.7ms)
+
+
+  
+SyntaxError (/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+e, :class => 'thumb', sign out) login_path, :method => 'dele
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+gn out) login_path, :method => 'delete');@output_buffer.safe
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting keyword_end
+gin_path, :method => 'delete');@output_buffer.safe_append='
+                              ^):
+  
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/layouts/application.html.erb:20: syntax error, unexpected ')', expecting keyword_end
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:36:20 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (54.5ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 10.4ms)
+
+
+  
+SyntaxError (/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+ :class => 'thumb') login_path, :method => 'delete');@output
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+thumb') login_path, :method => 'delete');@output_buffer.safe
+                              ^):
+  
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:37:11 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (53.4ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 4.0ms)
+
+
+  
+SyntaxError (/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+ :class => 'thumb') login_path, :method => 'delete');@output
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+thumb') login_path, :method => 'delete');@output_buffer.safe
+                              ^):
+  
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:37:16 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 3.5ms)
+
+
+  
+SyntaxError (/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+ :class => 'thumb') login_path, :method => 'delete');@output
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+thumb') login_path, :method => 'delete');@output_buffer.safe
+                              ^):
+  
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:37:27 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (45.3ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 3.1ms)
+
+
+  
+SyntaxError (/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+ :class => 'thumb') login_path, :method => 'delete');@output
+                              ^
+/Users/jheepark/Projects/WDIProject1/artcollab/app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+thumb') login_path, :method => 'delete');@output_buffer.safe
+                              ^):
+  
+app/views/layouts/application.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/layouts/application.html.erb:20: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:37:50 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 414ms (Views: 362.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:38:39 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (56.4ms)
+Completed 200 OK in 314ms (Views: 285.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:40:03 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 669ms (Views: 591.2ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:40:24 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 588ms (Views: 511.6ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:41:07 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 520ms (Views: 486.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:42:35 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 331ms (Views: 268.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:43:31 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (59.1ms)
+Completed 200 OK in 646ms (Views: 595.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 12:43:38 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 61ms (Views: 49.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 12:44:03 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 428ms (Views: 370.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 12:44:15 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 225ms (Views: 196.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2017-08-28 12:44:38 +1000
+Processing by ArtworksController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering artworks/index.html.erb within layouts/application
+  [1m[36mArtwork Load (20.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  Rendered artworks/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 324ms (Views: 290.8ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:44:43 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (6.0ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 99ms (Views: 79.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:45:05 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (41.0ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 408ms (Views: 318.7ms | ActiveRecord: 43.5ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:45:21 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (5.7ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 188ms (Views: 152.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:45:34 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (31.8ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 215ms (Views: 145.6ms | ActiveRecord: 33.1ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:46:00 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (2.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 543ms (Views: 475.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:46:31 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (1.1ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 480ms (Views: 401.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:47:05 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (4.8ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 765ms (Views: 621.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:47:23 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (0.6ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 610ms (Views: 552.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:47:40 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (2.3ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (64.2ms)
+Completed 200 OK in 668ms (Views: 620.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:47:51 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 253ms (Views: 225.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:48:00 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 195ms (Views: 179.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:48:15 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (3.3ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 269ms (Views: 221.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:48:17 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (0.7ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 73ms (Views: 64.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:48:56 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 520ms (Views: 484.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:49:19 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (2.1ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 602ms (Views: 551.8ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:49:40 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (40.6ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (74.1ms)
+Completed 200 OK in 621ms (Views: 454.9ms | ActiveRecord: 47.6ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:49:58 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 385ms (Views: 359.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:50:07 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (9.5ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 210ms (Views: 164.8ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:50:49 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (1.0ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 506ms (Views: 409.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:51:02 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (2.1ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 126ms (Views: 106.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 12:51:17 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (0.6ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 219ms (Views: 203.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 12:51:32 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 346ms (Views: 330.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2017-08-28 12:51:36 +1000
+Processing by ArtworksController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering artworks/index.html.erb within layouts/application
+  [1m[36mArtwork Load (18.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  Rendered artworks/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 86ms (Views: 58.3ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-28 12:51:37 +1000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 11]]
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 112ms (Views: 98.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-08-28 12:51:38 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (1.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 155ms (Views: 121.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:51:46 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 80ms (Views: 68.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-08-28 12:51:52 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mPhoto Load (7.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 78ms (Views: 59.0ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 12:51:54 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 67ms (Views: 58.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2017-08-28 12:51:56 +1000
+Processing by ArtworksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering artworks/index.html.erb within layouts/application
+  [1m[36mArtwork Load (7.1ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  Rendered artworks/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 63ms (Views: 50.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:01:39 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (137.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 1381ms (Views: 918.1ms | ActiveRecord: 137.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:01:43 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (36.6ms)
+Started GET "/artworks" for 127.0.0.1 at 2017-08-28 14:01:44 +1000
+Processing by ArtworksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering artworks/index.html.erb within layouts/application
+Completed 200 OK in 463ms (Views: 349.0ms | ActiveRecord: 7.3ms)
+
+
+  [1m[36mArtwork Load (20.8ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  Rendered artworks/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 877ms (Views: 834.1ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:01:49 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 382ms (Views: 224.6ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2017-08-28 14:01:51 +1000
+Processing by ArtworksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering artworks/index.html.erb within layouts/application
+  [1m[36mArtwork Load (16.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  Rendered artworks/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 155ms (Views: 129.4ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-28 14:01:53 +1000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mArtwork Load (2.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mArtwork Load (0.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 11]]
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 155ms (Views: 121.5ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-08-28 14:01:55 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (2.1ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mPhoto Load (8.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (54.7ms)
+Completed 200 OK in 216ms (Views: 170.3ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 14:01:58 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 181ms (Views: 161.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:09:39 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 1408ms (Views: 1244.7ms | ActiveRecord: 14.5ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2017-08-28 14:09:45 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nQTOcv2ApJhmdytkKp6bSfsA/rgotmyApVI4lDpMZaPbGSH4xOQbfnmIKMywmJieePZGLB/ED19ChSe60ywgTQ=="}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:09:45 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 660ms (Views: 648.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:09:50 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 254ms (Views: 244.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-28 14:09:54 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 831ms (Views: 824.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-08-28 14:10:03 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+RB0CG1Zqtz5cl/aOjyu6jKKyzomAFk0CMu9iGCE7Z5+a5aGNHZTWwaytfy7vFsKzyTuN/qYrs39DHYyOJWWA==", "email"=>"Bob@burgers.com", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (22.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Bob@burgers.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 165ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-08-28 14:10:03 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (2.1ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mPhoto Load (1.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (119.8ms)
+Completed 200 OK in 461ms (Views: 434.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-08-28 14:10:13 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (6.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mPhoto Load (6.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (103.0ms)
+Completed 200 OK in 475ms (Views: 419.4ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2017-08-28 14:11:46 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (2.1ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[36mPhoto Load (3.1ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/show.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 454ms (Views: 402.5ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 14:11:49 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 287ms (Views: 247.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-08-28 14:11:52 +1000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (26.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mArtwork Load (1.1ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[36mArtwork Load (1.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 11]]
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 237ms (Views: 184.5ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2017-08-28 14:11:54 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mPhoto Load (6.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 172ms (Views: 156.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-08-28 14:11:59 +1000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 82ms (Views: 70.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2017-08-28 14:12:00 +1000
+Processing by ArtworksController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering artworks/index.html.erb within layouts/application
+  [1m[36mArtwork Load (3.0ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  Rendered artworks/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 93ms (Views: 80.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 14:12:01 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtwork Load (1.9ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 123ms (Views: 108.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:12:02 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2017-08-28 14:12:06 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SQY64v9Ayli8usXB5R+0K5t9XBm69lzwudKeiniGr3cPG9VoxiR1vqNFxml/Gbf8GIvkjY2EPy9eBYGkkebqmQ=="}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:12:06 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 177ms (Views: 167.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:12:07 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 74ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:12:19 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 430ms (Views: 404.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:13:25 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 1774ms (Views: 1736.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:13:47 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (208.6ms)
+Completed 200 OK in 2532ms (Views: 2453.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-28 14:14:07 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 649ms (Views: 623.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-08-28 14:14:22 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Knghe9LFNe7oJ+SebUu1+FWCg/Iu2bYULW92kle+UupsZc7x66GKCPfY5zb3TbYv1nQ7Zhmr1cvKuGm8vt4XBA==", "email"=>"Rainbowdash@pony.com", "password"=>"[FILTERED]", "commit"=>"Sign in"}
+  [1m[36mUser Load (23.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Rainbowdash@pony.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 243ms (ActiveRecord: 23.8ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2017-08-28 14:14:22 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArtwork Load (0.8ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."user_id" = $1[0m  [["user_id", 6]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 6]]
+  Rendered users/show.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 251ms (Views: 220.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:14:29 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 268ms (Views: 253.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/artworks" for 127.0.0.1 at 2017-08-28 14:14:31 +1000
+Processing by ArtworksController#index as HTML
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering artworks/index.html.erb within layouts/application
+  [1m[36mArtwork Load (24.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks"[0m
+  Rendered artworks/index.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 295ms (Views: 226.7ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/artworks/10" for 127.0.0.1 at 2017-08-28 14:14:36 +1000
+Processing by ArtworksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mArtwork Load (1.6ms)[0m  [1m[34mSELECT  "artworks".* FROM "artworks" WHERE "artworks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artworks/show.html.erb within layouts/application
+  Rendered artworks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 72ms (Views: 60.9ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2017-08-28 14:14:39 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aKzw5MdwsKkwCYgYMXu0CNNFd5nf03DWD1nrnR/KSoEusR9u/hQPTy/2i7CrfbffULPPDeihEwnojvSz9qoPbw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 14:14:39 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 64ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:14:43 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (229.5ms)
+Completed 200 OK in 621ms (Views: 542.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:18:06 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (55.3ms)
+Completed 200 OK in 583ms (Views: 554.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:18:16 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (149.8ms)
+Completed 200 OK in 743ms (Views: 720.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:18:25 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 756ms (Views: 739.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:18:50 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 633ms (Views: 613.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:19:19 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 513ms (Views: 494.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:19:29 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 446ms (Views: 422.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-08-28 14:19:40 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (91.7ms)
+Completed 200 OK in 620ms (Views: 564.5ms | ActiveRecord: 0.0ms)
+
+
