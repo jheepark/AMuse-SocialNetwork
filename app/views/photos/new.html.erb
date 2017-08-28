@@ -4,7 +4,8 @@
 <%= form_for @photo do |f| %>
 <fieldset>
   <%= f.label :image, "Image URL" %>
+  <br>
   <%= f.url_field :image, :placeholder => "http..." %>
 </fieldset>
-<%= f.submit "Upload!" %>
+<%= f.submit "Upload!", :class => "submit" %>
 <% end %>

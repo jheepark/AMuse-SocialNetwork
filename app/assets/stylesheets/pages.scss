@@ -21,10 +21,10 @@
 }
 
 .homepage p{
-  font-size: 20px;
-  padding-bottom: 20px;
+  font-size: 16px;
   color: white;
   font-weight: 300;
+  margin-bottom: 40px;
 }
 
 .homepage a{
@@ -33,7 +33,23 @@
   margin-top: 20px;
   padding: 10px 30px
 }
+nav {
+  background: black;
+  padding: 20px;
+  text-align: left;
+  margin-right: 0;
+  padding-bottom: 30px;
+  vertical-align: top;
+  text-align: top;
+}
 
-a.leftnav {
-  float: left;
+nav a:hover {
+  box-sizing: border-box;
+  color: rgb(0, 209, 255);
+  border-bottom: 1px solid rgb(0, 209, 255);
+  border-bottom: 25%;
+}
+
+.right {
+  float: right;
 }

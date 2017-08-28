@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Artcollab</title>
+    <title>A Muse</title>
     <%= csrf_meta_tags %>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
     <div class="container">
       <nav>
 
-          <%= link_to 'Home', root_path, :class => "leftnav"%>
-          <%= link_to 'Explore', artworks_path, :class => "leftnav"%>
+          <%= link_to 'Home', root_path, :class => ""%>
+          <%= link_to 'Explore', artworks_path, :class => ""%>
+        <div class="right">
         <% if @current_user.present? %>
-        <%= link_to 'Community', users_path %>
-        <%= link_to "Profile Page", user_path(@current_user)%>
-        <%= link_to "Edit profile", edit_user_path(@current_user)%>
-        <%= link_to image_tag(@current_user.image, :class => 'thumb'), login_path, :method => 'delete'%>
-        <%= link_to "Sign out #{@current_user.name}", login_path, :method => 'delete'%>
+          <%= link_to 'Community', users_path %>
+          <%= link_to "Profile Page", user_path(@current_user)%>
+          <%= link_to "Edit profile", edit_user_path(@current_user)%>
+          <%= link_to image_tag(@current_user.image, :class => 'thumb'), login_path, :method => 'delete'%>
+          <%= link_to "Sign out #{@current_user.name}", login_path, :method => 'delete'%>
         <% else %>
         <%= link_to 'Sign up', new_user_path %>
         <%= link_to 'Sign in', login_path %>
         <% end %>
+      </div>
       </nav>
       <%= yield %>
     </div>
