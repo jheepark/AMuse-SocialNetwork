@@ -1,4 +1,14 @@
 <h1> Community </h1>
+
 <% @users.each do |u| %>
+<div class="userandinfo">
   <%= link_to image_tag(u.image, :class => 'usersall'), u %>
+  <br>
+    <%= u.name %>
+    <br>
+    <%= u.location %>
+    <br>
+    Artworks: <%= u.artworks.length %>
+    <br>
+    </div>
 <% end %>

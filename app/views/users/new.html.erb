@@ -6,30 +6,38 @@
   <% end %>
 </ol>
 <% end %>
-<%= form_for @user do |f| %>
-<fieldset>
-  <%= f.label :image, "Profile Picture" %>
-  <%= f.url_field :image, :placeholder => "http..." %>
-</fieldset>
-<fieldset>
-  <%= f.label :name %>
-  <%= f.text_field :name, :require => true %>
-</fieldset>
-<fieldset>
-  <%= f.label :email %>
-  <%= f.email_field :email, :require => true %>
-</fieldset>
-<fieldset>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-</fieldset>
-<fieldset>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-</fieldset>
-<fieldset>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-</fieldset>
-<%= f.submit "Sign Up!" %>
-<% end %>
+<div class="signin">
+  <%= form_for @user do |f| %>
+  <fieldset>
+    <%= f.label :image, "Profile Picture" %>
+    <br>
+    <%= f.url_field :image, :placeholder => "http..." %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name, :require => true %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :email %>
+    <br>
+    <%= f.email_field :email, :require => true %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :location %>
+    <br>
+    <%= f.text_field :location %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :password %>
+    <br>
+    <%= f.password_field :password %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :password_confirmation %>
+    <br>
+    <%= f.password_field :password_confirmation %>
+  </fieldset>
+  <%= f.submit "Sign Up!", :class => 'submit' %>
+  <% end %>
+</div>

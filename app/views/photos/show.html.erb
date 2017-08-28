@@ -10,6 +10,6 @@
 <% unless @current_user.id == @photo.user_id %>
 <div class="controls">
   <p> Does this image inspire you?</p>
-  <%= link_to "Upload Your Artwork", new_artwork_path%>
+  <%= link_to "Upload Your Artwork", new_artwork_path( :photo_id => @photo.id )%>
  </div>
 <% end %>

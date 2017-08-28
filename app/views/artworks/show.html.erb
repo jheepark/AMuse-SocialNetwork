@@ -1,4 +1,10 @@
-  <%= image_tag @artwork.image, :class =>'feature' %>
+<h1>Artwork</h1>
+  <%= image_tag @artwork.image, :class =>'artworkshow' %>
+  <% if @artwork.photo_id %>
+  <h1>Inspiration</h1>
+    <%= image_tag @artwork.photo.image, :class => 'feature' %>
+  <% end %>
+
 
 <% if @current_user.present? && @current_user.id == @artwork.user_id %>
   <div class="controls">

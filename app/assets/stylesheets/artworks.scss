@@ -1,3 +1,17 @@
 // Place all the styles related to the Artworks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.artworkshow {
+  height: 500px;
+}
+
+.allartworks {
+  height: 160px;
+}
+
+img.allartworks:hover {
+  box-sizing: border-box;
+  border-color: rgb(0, 209, 255);
+  border-width: 5px;
+  border-style: solid;
+}

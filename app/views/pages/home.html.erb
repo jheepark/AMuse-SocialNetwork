@@ -1,5 +1,11 @@
-<h1>MUSE</h1>
-<p>A community for Artists and Muses</p>
-<% if @current_user.present? %>
-Welcome back <%= @current_user.name %>
-<% end %>
+<div class="home">
+  <div class="homepage">
+    <h1>A MUSE.</h1>
+    <p>A community for Artists and Muses</p>
+    <% if !@current_user.present? %>
+    <%= link_to 'Sign up', new_user_path%>
+    <% end %>
+  </div>
+</div>
+<div class="bottomhome">
+</div>

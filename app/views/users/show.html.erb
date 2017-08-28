@@ -2,7 +2,9 @@
   <div class= "userleft">
     <h2><%= @user.name %></h2>
       <%= image_tag @user.image, :class =>'feature' %>
+      <h4>Artworks: <%= @user.artworks.length %></h4>
       <h3>Location: <%= @user.location %></h3>
+      <br>
     <% if @current_user.id == @user.id %>
     <div class="controls">
       <%= link_to "Edit Profile", edit_user_path(@user)%>

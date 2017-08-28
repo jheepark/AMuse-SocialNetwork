@@ -25,6 +25,7 @@ class ArtworksController < ApplicationController
   def create
     @artwork = Artwork.new artwork_params
     @artwork.user_id = @current_user.id
+    @artwork.photo_id = params[:photo_id]
     @artwork.save
     redirect_to root_path
   end
