@@ -5,6 +5,12 @@ root :to => 'pages#home'
 resources :users
 resources :artworks
 resources :photos
+resources :users do
+  member do
+    get :following, :followers
+  end
+end
+resources :relationships, only: [:create, :destroy]
 
 get '/login' => 'session#new'
 post '/login' => 'session#create'

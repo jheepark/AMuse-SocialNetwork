@@ -2,6 +2,9 @@
   <div class= "userleft">
     <h2><%= @user.name %></h2>
       <%= image_tag @user.image, :class =>'feature' %>
+      <section class="stats">
+  <%= render 'shared/stats' %>
+</section>
       <h4>Artworks: <%= @user.artworks.length %></h4>
       <h3>Location: <%= @user.location %></h3>
       <br>

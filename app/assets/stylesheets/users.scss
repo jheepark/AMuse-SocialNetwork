@@ -172,3 +172,45 @@ h3 {
 h2 {
   text-transform: uppercase;
 }
+
+
+
+.stats {
+  box-sizing: border-box;
+  padding-left: 12px;
+  overflow: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  a {
+    float: left;
+    padding-left: 20px;
+    border-left: 1px solid white;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #3494E6;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
