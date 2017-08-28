@@ -124,11 +124,22 @@ input {
 }
 
 .submit {
+  text-transform: uppercase;
   border: 1px solid white;
   color: white;
   width: 100px;
   height: 28px;
   font-size: 14px;
+  background: black;
+}
+
+.submit:hover {
+  background: #3494E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EC6EAD, #3494E6);
+}
+
+.controls a:hover {
   background: #3494E6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EC6EAD, #3494E6);
