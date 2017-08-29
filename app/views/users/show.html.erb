@@ -1,12 +1,17 @@
 <div class="container">
-  <div class= "userleft">
+  <aside class= "userleft">
     <h2><%= @user.name %></h2>
       <%= image_tag @user.image, :class =>'feature' %>
       <section class="stats">
   <%= render 'shared/stats' %>
 </section>
-      <h4>Artworks: <%= @user.artworks.length %></h4>
-      <h3>Location: <%= @user.location %></h3>
+<div class="followform">
+  <%= render 'follow_form' if @current_user.present? %>
+</div>
+<div class="userinfo">
+  <p>Artworks: <%= @user.artworks.length %></p>
+  <p>Location: <%= @user.location %></p>
+</div>
       <br>
     <% if @current_user.id == @user.id %>
     <div class="controls">
@@ -14,7 +19,7 @@
       <%= link_to "Delete Profile", @user, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
     </div>
     <% end %>
-    </div>
+  </aside>
   <div class= "userright">
     <h1> Artworks </h1>
     <% @user.artworks.each do |a| %>
