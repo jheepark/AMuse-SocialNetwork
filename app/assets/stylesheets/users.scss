@@ -56,6 +56,8 @@ display: inline-block;
 .feature {
   height: 200px;
   border: 4px solid white;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .allphotos {
@@ -195,17 +197,6 @@ h2 {
   }
 }
 
-.user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-  a {
-    padding: 0;
-  }
-}
-
 .users.follow {
   padding: 0;
 }
@@ -226,4 +217,15 @@ h2 {
   margin-top: 20px;
   letter-spacing: 1px;
   font-weight: 300;
+}
+.usersavatar {
+  height: 100px;
+}
+.usersavatar:hover {
+  border: 4px solid cyan;
+}
+
+.viewprofile a{
+  margin: 0;
+  padding: 0;
 }
