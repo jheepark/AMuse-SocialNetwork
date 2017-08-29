@@ -1,3 +1,5 @@
+<div class="homeedit">
+  <div class="blackbox">
 <h1>Sign Up</h1>
 <% if @user.errors.any? %>
 <ol>
@@ -6,7 +8,7 @@
   <% end %>
 </ol>
 <% end %>
-<div class="signin">
+<div class="editform">
   <%= form_for @user do |f| %>
   <fieldset>
     <%= f.label :image, "Profile Picture" %>
@@ -40,4 +42,6 @@
   </fieldset>
   <%= f.submit "Sign Up!", :class => 'submit' %>
   <% end %>
+</div>
+</div>
 </div>

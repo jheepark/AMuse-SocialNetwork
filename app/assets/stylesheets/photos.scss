@@ -1,3 +1,27 @@
 // Place all the styles related to the Photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.allphotos {
+  position: relative;
+  height: 120px;
+  padding: 0;
+  margin: 20px auto;
+}
+
+.allphotos:hover {
+  border: 4px solid cyan;
+  transform: scale(1.15);
+}
+
+.photoshow {
+  margin: 20px auto;
+  height: 300px;
+}
+
+.photoheading h2 {
+  margin: 40px auto;
+}
+
+.photoandinspo {
+  display: inline-block;
+}

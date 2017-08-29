@@ -1,13 +1,23 @@
-<h1>Artwork</h1>
-  <%= image_tag @artwork.image, :class =>'artworkshow' %>
-  <% if @artwork.photo_id %>
-  <h1>Inspiration</h1>
-    <%= image_tag @artwork.photo.image, :class => 'feature' %>
-  <% end %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="photoheading">
+      <h2><%= @artwork.user.name%>'s artwork</h2>
+    </div>
+      <%= image_tag @artwork.image, :class =>'artworkshow' %>
 
-<% if @current_user.present? && @current_user.id == @artwork.user_id %>
-  <div class="artworkcontrols">
-    <%= link_to "Edit Artwork", edit_artwork_path(@artwork)%>
-    <%= link_to "Delete Artwork", @artwork, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
-   </div>
-<% end %>
+      <% if @current_user.present? && @current_user.id == @artwork.user_id %>
+        <div class="artworkcontrols">
+          <%= link_to "Edit Artwork", edit_artwork_path(@artwork)%>
+          <%= link_to "Delete Artwork", @artwork, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
+         </div>
+      <% end %>
+  </div>
+  <div class="col-md-6">
+    <% if @artwork.photo_id %>
+    <div class="photoheading">
+      <h2>Inspired by:</h2>
+    </div>
+      <%= image_tag @artwork.photo.image, :class => 'photoshow' %>
+    <% end %>
+  </div>
+</div>

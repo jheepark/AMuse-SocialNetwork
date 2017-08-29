@@ -1,6 +1,6 @@
 <div class="displayfollowinfo">
   <%= link_to image_tag(user.image, :class => 'usersavatar'), user %>
-  <p><%=user.name%></p>
+  <%=user.name%>
 <% if @current_user == @user%>
 <% if @title == "Following" %>
   <%= link_to "Unfollow", relationship_path( @current_user.active_relationships.find_by(followed_id: user.id) ), :method => :delete, :data => {:confirm => 'Are you sure?'}%>

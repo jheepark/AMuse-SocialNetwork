@@ -1,9 +1,12 @@
-<h1>coming soon</h1>
+<div class="photoheading">
+  <h2>Upload your artwork</h2>
+</div>
 <%= form_for @artwork do |f| %>
 <%= hidden_field_tag :photo_id, params[:photo_id]%>
 <fieldset>
   <%= f.label :image, "Image URL" %>
+  <br>
   <%= f.url_field :image, :placeholder => "http..." %>
 </fieldset>
-<%= f.submit "Upload!" %>
+<%= f.submit "Upload!", :class => "submit" %>
 <% end %>

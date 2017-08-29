@@ -2,14 +2,13 @@
   <aside class= "userleft">
     <h2><%= @user.name %></h2>
       <%= image_tag @user.image, :class =>'feature' %>
-      <section class="stats">
-  <%= render 'shared/stats' %>
-</section>
+        <section class="stats">
+    <%= render 'shared/stats' %>
+  </section>
 <div class="followform">
   <%= render 'follow_form' if @current_user.present? %>
 </div>
 <div class="userinfo">
-  <p>Artworks: <%= @user.artworks.length %></p>
   <p>Location: <%= @user.location %></p>
 </div>
       <br>
@@ -34,7 +33,6 @@
       <% end %>
 
       <% if @current_user.id == @user.id %>
-      <h3>Inspire others by uploading a photo</h3>
       <div class="upload">
         <%= link_to "Upload Photo", new_photo_path%>
       </div>

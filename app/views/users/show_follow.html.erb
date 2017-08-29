@@ -1,8 +1,7 @@
 <% provide(:title, @title) %>
-<div class="row">
-  <aside class="col-md-4">
+  <aside class= "userleft">
     <section class="user_info">
-      <h1><%= @user.name %></h1>
+      <h2><%= @user.name %></h2>
       <%= link_to image_tag(@user.image, :class => 'feature'), @user %>
       <br>
       <span class = "viewprofile"><%= link_to "view my profile", @user %></span>
@@ -18,12 +17,11 @@
       <% end %>
     </section>
   </aside>
-  <div class="col-md-8">
-    <h3><%= @title %></h3>
+  <div class= "userright">
+    <h1><%= @title %></h1>
     <% if @users.any? %>
     <ul class="users follow">
       <%= render @users %>
     </ul>
   <% end %>
   </div>
-</div>

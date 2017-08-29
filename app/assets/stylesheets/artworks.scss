@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .artworkshow {
-  height: 500px;
+  height: 300px;
   margin-bottom: 50px;
 }
 
@@ -37,9 +37,10 @@ img.allartworks:hover {
 
 .allartworksuser {
   position: relative;
-  height: 100px;
+  height: 120px;
   padding: 0;
-  margin: 0;
+  margin: 20px auto;
+  margin-right: 10px;
 }
 
 .userright a {
@@ -60,53 +61,24 @@ img.allartworks:hover {
 
 .bodyclone {
 width: 80%;
-margin: 30px auto;
+margin: 50px auto;
 font-family: sans-serif;
+display: flex;
+flex-wrap: wrap;
 }
 
-.userartworks {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.userartworks a {
-display: inline-block;
-margin-bottom: 8px;
-width: calc(50% - 4px);
-margin-right: 8px;
-text-decoration: none;
-color: black;
-}
-
-.userartworks a:nth-of-type(2n) {
-  margin-right: 0;
-}
-
-@media screen and (min-width: 50em) {
-  .userartworks a {
-    width: calc(25% - 6px);
-  }
-
-  .userartworks a:nth-of-type(2n) {
-    margin-right: 8px;
-  }
-
-  .userartworks a:nth-of-type(4n) {
-    margin-right: 0;
-  }
-}
-
-.userartworks a:hover img {
-  transform: scale(1.15);
-}
-
-.userartworks img {
-  border: none;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  background: #ccc;
-  transition: transform .2s ease-in-out;
-  margin: 0;
+.thumber {
+  width: 200px;
+  height: 200px;
   overflow: hidden;
+  transition: transform .2s ease-in-out;
+}
+
+.thumber:hover {
+  transform: scale(1.2);
+}
+
+.allartworksuser:hover {
+  border: 4px solid cyan;
+  transform: scale(1.15);
 }
