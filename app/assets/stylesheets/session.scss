@@ -2,8 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .signin {
+  margin: 0 auto;
   padding-top: 50px;
   text-align: left;
-  margin-left: 30%;
   line-height: 30px;
+  margin-left: 28.5%;
+}
+
+.error {
+  background-color: red;
+  color: white;
+  width: 400px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
 }

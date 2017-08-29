@@ -11,6 +11,10 @@
   height: 160px;
 }
 
+.artworksdisplay {
+    display: inline-block;
+}
+
 img.allartworks:hover {
   box-sizing: border-box;
   border-color: rgb(0, 209, 255);
@@ -18,9 +22,6 @@ img.allartworks:hover {
   border-style: solid;
 }
 
-.artworkcontrols {
-  padding-top: 20px;
-}
 
 .artworkcontrols a {
   margin-top: 40px;
@@ -32,4 +33,80 @@ img.allartworks:hover {
   background: #3494E6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EC6EAD, #3494E6);
+}
+
+.allartworksuser {
+  position: relative;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+.userright a {
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.userright h3 {
+  padding: 0;
+  margin: 20px 0;
+}
+
+.userright h1 {
+  padding: 0;
+  margin: 25px 0;
+}
+
+.bodyclone {
+width: 80%;
+margin: 30px auto;
+font-family: sans-serif;
+}
+
+.userartworks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.userartworks a {
+display: inline-block;
+margin-bottom: 8px;
+width: calc(50% - 4px);
+margin-right: 8px;
+text-decoration: none;
+color: black;
+}
+
+.userartworks a:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 50em) {
+  .userartworks a {
+    width: calc(25% - 6px);
+  }
+
+  .userartworks a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  .userartworks a:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+.userartworks a:hover img {
+  transform: scale(1.15);
+}
+
+.userartworks img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+  margin: 0;
+  overflow: hidden;
 }
