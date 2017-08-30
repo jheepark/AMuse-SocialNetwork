@@ -19,8 +19,10 @@ class PhotosController < ApplicationController
   end
 
   def create
+    cloudinary = Cloudinary::Uploader.upload(params["photo"]["image"])
     @photo = Photo.new photo_params
     @photo.user_id = @current_user.id
+    @photo.image =cloudinary["url"]
     @photo.save
     redirect_to root_path
   end

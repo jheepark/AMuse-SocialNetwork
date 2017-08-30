@@ -10,7 +10,7 @@
 </div>
 <% end %>
 
-<%= image_tag @photo.image, :class =>'photoshow' %>
+<%= image_tag @photo.link, :class =>'photoshow' %>
 
 <% unless @current_user.id == @photo.user_id %>
 <div class="controls">
