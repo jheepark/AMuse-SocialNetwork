@@ -1,11 +1,11 @@
 <h1>Inspire Others!</h1>
-<p>Get started by uploading your image</p>
+<br>
+<h3>Get started by uploading a photo</h3>
 <div class="blackbox">
+  <%= image_tag "defaultpp.jpg", :class => 'default' %>
 <%= form_for @photo, :html => {:multipart => true} do |f| %>
-<div class="editform">
+<div class="replaceform">
   <fieldset>
-    <%= f.label :image, "Image URL" %>
-    <br>
     <%= f.file_field :image %>
   </fieldset>
 </div>

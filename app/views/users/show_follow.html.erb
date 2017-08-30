@@ -4,11 +4,13 @@
       <h2><%= @user.name %></h2>
       <%= link_to image_tag(@user.image, :class => 'feature'), @user %>
       <br>
-      <span class = "viewprofile"><%= link_to "view my profile", @user %></span>
+      <div class = "viewprofile"><%= link_to "view my profile", @user %></div>
+      <br>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
       <% if @users.any? %>
+      <br>
         <div class="user_avatars">
           <% @users.each do |user| %>
             <%= link_to image_tag(user.image, :class => 'usersavatar'), user %>

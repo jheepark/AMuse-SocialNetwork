@@ -13,6 +13,9 @@
 #
 
 class User < ApplicationRecord
+  geocoded_by :location
+  validates :location, :presence => true
+  after_validation :geocode
   has_secure_password
   validates :email, :presence => true, :uniqueness => true
   validates :name, :presence => true

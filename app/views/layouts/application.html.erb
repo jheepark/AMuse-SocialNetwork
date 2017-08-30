@@ -18,9 +18,12 @@
         <div class="right">
         <% if @current_user.present? %>
           <%= link_to 'Community', users_path %>
-          <%= link_to "Profile Page", user_path(@current_user)%>
+          <% if @current_user.image.present? %>
+          <%= link_to image_tag(@current_user.image, :class => 'thumb'), user_path(@current_user)%>
+          <% else %>
+          <%= link_to "Profile page", user_path(@current_user)%>
+          <% end %>
           <%= link_to "Edit profile", edit_user_path(@current_user)%>
-          <%= link_to image_tag(@current_user.image, :class => 'thumb'), login_path, :method => 'delete'%>
           <%= link_to "Sign out #{@current_user.name}", login_path, :method => 'delete'%>
         <% else %>
         <%= link_to 'Sign up', new_user_path %>

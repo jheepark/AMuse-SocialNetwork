@@ -1,14 +1,14 @@
 <div class="photoheading">
-<h2>Replace Image</h2>
+<h2>Replace Artwork</h2>
 </div>
 <div class="blackbox">
+  <%= image_tag "defaultpp.jpg", :class => 'default' %>
   <%= form_for @artwork, :html => {:multipart => true} do |f| %>
-  <div class="editform">
+  <div class="replaceform">
 <%= hidden_field_tag :photo_id, params[:photo_id]%>
 <fieldset>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
+  <%= f.file_field :image%>
 </fieldset>
-<%= f.submit "Edit", :class => "submit" %>
+<%= f.submit "Upload", :class => "submit" %>
 <% end %>
   </div>

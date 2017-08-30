@@ -2,12 +2,12 @@
 <h2>Replace Photo</h2>
 </div>
 <div class="blackbox">
+  <%= image_tag "defaultpp.jpg", :class => 'default' %>
   <%= form_for @photo, :html => {:multipart => true} do |f| %>
-  <div class="editform">
+  <div class="replaceform">
 <fieldset>
-  <%= f.label :image %>
   <%= f.file_field :image %>
 </fieldset>
-<%= f.submit "Edit", :class => "submit" %>
+<%= f.submit "Upload", :class => "submit" %>
 <% end %>
   </div>
