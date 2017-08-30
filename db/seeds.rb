@@ -16,11 +16,15 @@ Artwork.destroy_all
 a1 = Artwork.create :image => "https://i.pinimg.com/736x/02/59/aa/0259aa1ae1ba2a200e2b831dee05ecc7--bob-s-bobs-burgers-art.jpg"
 a2 = Artwork.create :image => "http://vignette1.wikia.nocookie.net/mylittlepony/images/8/8f/Rainbow_Dash.png/revision/latest?cb=20130927081007&path-prefix=fr"
 
+Comment.destroy_all
+c1 = Comment.create :content => "lalalala"
+
 u1.photos << p1
 u1.artworks << a1 << a2
 p1.artworks << a1
 u1.followers << u2
-
+u1.comments << c1
+a1.comments << c1
 # users = User.all
 # user  = users.first
 # following = users[2..50]

@@ -5,6 +5,8 @@ root :to => 'pages#home'
 resources :users
 resources :artworks
 resources :photos
+resources :comments
+resources :likes
 resources :users do
   member do
     get :following, :followers

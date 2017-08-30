@@ -1,18 +1,16 @@
 # == Schema Information
 #
-# Table name: artworks
+# Table name: likes
 #
 #  id         :integer          not null, primary key
-#  image      :text
 #  user_id    :integer
-#  photo_id   :integer
+#  artwork_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Artwork < ApplicationRecord
-  belongs_to :photo, :optional => true
+class Like < ApplicationRecord
   belongs_to :user, :optional => true
-  has_many :likes
-  has_many :comments
+  belongs_to :artwork, :optional => true
+  validates :user_id, uniqueness: { scope: :artwork_id }
 end

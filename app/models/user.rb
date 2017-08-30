@@ -10,6 +10,8 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string
+#  longitude       :float
+#  latitude        :float
 #
 
 class User < ApplicationRecord
@@ -21,6 +23,9 @@ class User < ApplicationRecord
   validates :name, :presence => true
   has_many :artworks
   has_many :photos
+  has_many :likes
+  has_many :comments
+  has_many :liked_artworks, through: :likes, source: :artwork
   has_many :active_relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
   has_many :passive_relationships, class_name:  "Relationship",
                                    foreign_key: "followed_id",
@@ -38,5 +43,9 @@ end
 
 def following?(other_user)
   following.include?(other_user)
+end
+
+def likes?(artwork)
+  likes.include?(artwork)
 end
 end
