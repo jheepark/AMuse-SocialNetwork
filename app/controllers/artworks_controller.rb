@@ -14,8 +14,10 @@ class ArtworksController < ApplicationController
 
   def update
     artwork = Artwork.find params[:id]
-    artwork.update artwork_params
-    redirect_to root_path
+    cloudinary = Cloudinary::Uploader.upload(params["artwork"]["image"])
+    artwork.image = cloudinary["url"]
+    artwork.save
+    redirect_to user_path(@current_user.id)
   end
 
   def new
@@ -23,17 +25,19 @@ class ArtworksController < ApplicationController
   end
 
   def create
+    cloudinary = Cloudinary::Uploader.upload(params["artwork"]["image"])
     @artwork = Artwork.new artwork_params
     @artwork.user_id = @current_user.id
     @artwork.photo_id = params[:photo_id]
+    @artwork.image = cloudinary["url"]
     @artwork.save
-    redirect_to root_path
+    redirect_to user_path(@artwork.user_id)
   end
 
   def destroy
     artwork = Artwork.find params[:id]
     artwork.destroy
-    redirect_to root_path
+    redirect_to user_path(@current_user.id)
   end
 
   private

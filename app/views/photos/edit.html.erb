@@ -1,10 +1,13 @@
-<h1>Replace Photo</h1>
-<%= form_for @photo do |f| %>
-
+<div class="photoheading">
+<h2>Replace Photo</h2>
+</div>
+<div class="blackbox">
+  <%= form_for @photo, :html => {:multipart => true} do |f| %>
+  <div class="editform">
 <fieldset>
   <%= f.label :image %>
-  <%= f.url_field :image, :placeholder => "http..." %>
+  <%= f.file_field :image %>
 </fieldset>
-
-<%= f.submit "Edit" %>
+<%= f.submit "Edit", :class => "submit" %>
 <% end %>
+  </div>

@@ -10,8 +10,10 @@ class PhotosController < ApplicationController
 
   def update
     photo = Photo.find params[:id]
-    photo.update photo_params
-    redirect_to root_path
+    cloudinary = Cloudinary::Uploader.upload(params["photo"]["image"])
+    photo.image = cloudinary["url"]
+    photo.save
+    redirect_to user_path(@current_user.id)
   end
 
   def new
@@ -24,7 +26,7 @@ class PhotosController < ApplicationController
     @photo.user_id = @current_user.id
     @photo.image =cloudinary["url"]
     @photo.save
-    redirect_to root_path
+    redirect_to user_path(@current_user.id)
   end
 
 

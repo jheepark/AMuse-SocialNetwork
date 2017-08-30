@@ -2,15 +2,14 @@
   <h2>Upload your artwork</h2>
 </div>
 <div class="blackbox">
+  <%= form_for @artwork, :html => {:multipart => true} do |f| %>
   <div class="editform">
-    <%= form_for @artwork do |f| %>
     <%= hidden_field_tag :photo_id, params[:photo_id]%>
     <fieldset>
       <%= f.label :image, "Image URL" %>
       <br>
-      <%= f.url_field :image, :placeholder => "http..." %>
+      <%= f.file_field :image%>
     </fieldset>
     <%= f.submit "Upload!", :class => "submit" %>
     <% end %>
   </div>
-</div>
