@@ -5,24 +5,28 @@
     </div>
       <%= image_tag @artwork.image, :class =>'artworkshow' %>
       <% if @comments.first.present? %>
-      <ul>
-<% @comments.each do |comment| %>
-  <li>
-    <%= comment.content %> | <%=link_to comment.user.name, user_path(comment.user)%> |
-    <% if @current_user.id == comment.user_id %>
-        <%= link_to "Delete Comment", @comment, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
-  </li>
+      <div class="commentbox">
+        <ul>
+  <% @comments.each do |comment| %>
+    <li>
+      <%=link_to comment.user.name, user_path(comment.user), :class =>"username"%><%= comment.content %> 
+      <% if @current_user.id == comment.user_id %>
+           <%= link_to image_tag("delete.png", :class => 'bin'), comment, :method => :delete, :data => {:confirm => 'Are you sure?'}%>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
   <% end %>
-  <% end %>
-</ul>
-<% end %>
+  <div class="commenting">
     <% if @current_user.present? %>
     <%= form_for @comment do |f| %>
     <div><%= hidden_field_tag :artwork_id, @artwork.id %></div>
-    <%= f.text_field :content %>
-    <%= f.submit "comment" %>
+    <%= f.text_field :content, placeholder: "write a comment here" %>
+    <%= f.submit "post", :class => "submit" %>
     <% end %>
     <% end %>
+  </div>
+      </div>
       <% if @current_user.present? && @current_user.id == @artwork.user_id %>
         <div class="artworkcontrols">
           <%= link_to "Edit Artwork", edit_artwork_path(@artwork)%>

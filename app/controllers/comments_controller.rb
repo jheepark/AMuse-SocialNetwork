@@ -5,14 +5,13 @@ def create
   @comment.user_id = @current_user.id
   artwork = Artwork.find params[:artwork_id]
   artwork.comments << @comment
-
   redirect_to artwork
 end
 
 def destroy
   comment = Comment.find params[:id]
   comment.destroy
-  redirect_to artwork
+  redirect_to artworks_path
 end
 
   private
