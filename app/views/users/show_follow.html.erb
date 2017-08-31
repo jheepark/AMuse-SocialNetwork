@@ -1,34 +1,34 @@
-<div class="followtitle">
-<% provide(:title, @title) %>
-  <aside class= "userleft">
-    <section class="user_info">
-      <h2><%= @user.name %></h2>
-      <div class="trial" style="background-image: url(<%=@user.image%>)">
-      </div>
-      <div class = "viewprofile"><%= link_to "view my profile", @user %></div>
-      <br>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-      <% if @users.any? %>
-      <br>
+<div class="profilecontainer">
+  <div class="followtitle">
+    <% provide(:title, @title) %>
+    <aside class="userleft">
+      <section class="user_info">
+        <h2><%= @user.name %></h2>
+        <div class="trial" style="background-image: url(<%=@user.image%>)"></div>
+        <div class="viewprofile"><%= link_to "view my profile", @user %></div>
+        <br>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+        <% if @users.any? %>
+        <br>
         <div class="user_avatars">
           <% @users.each do |u| %>
           <a href="<%= user_path(u) %>">
-              <div class="trialsmall" style="background-image: url(<%=u.image%>)">
-              </div>
+            <div class="trialsmall" style="background-image: url(<%=u.image%>)"></div>
           </a>
           <% end %>
-      <% end %>
-    </section>
-  </aside>
-  <div class= "userright">
-    <h1><%= @title %></h1>
-    <% if @users.any? %>
-    <ul class="users follow">
-      <%= render @users %>
-    </ul>
-  <% end %>
+          <% end %>
+        </section>
+      </aside>
+      <div class="userright">
+        <h1><%= @title %></h1>
+        <% if @users.any? %>
+        <ul class="users follow">
+          <%= render @users %>
+        </ul>
+        <% end %>
+      </div>
+    </div>
   </div>
-</div>
 </div>

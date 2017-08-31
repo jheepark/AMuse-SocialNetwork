@@ -70,7 +70,7 @@ fieldset {
   margin-top: 50px;
   display: inline-block;
   vertical-align: top;
-  background-color: rgb(102, 101, 102);
+  background-color: rgba(0,0,0,0.5);
   padding: 20px;
   color: white;
   border-radius: 10px;
@@ -85,15 +85,17 @@ fieldset {
 
 .userright {
   box-sizing: border-box;
-  width: 60%;
+  width: 65%;
   text-align: left;
   display: inline-block;
   vertical-align: top;
-  background-color: rgb(159, 159, 159);
+  background-color: rgb(67, 68, 66);
   margin-top: 50px;
   margin-right: 50px;
+  margin-left: 20px;
   height: 100%;
   min-height: 720px;
+  border-radius: 10px;
 }
 
 .userright nav {
