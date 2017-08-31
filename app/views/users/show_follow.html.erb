@@ -12,6 +12,7 @@
         <%= render 'shared/stats' %>
         <% if @users.any? %>
         <br>
+        </section>
         <div class="user_avatars">
           <% @users.each do |u| %>
           <a href="<%= user_path(u) %>">
@@ -19,7 +20,7 @@
           </a>
           <% end %>
           <% end %>
-        </section>
+          </div>
       </aside>
       <div class="userright">
         <h1><%= @title %></h1>
@@ -29,6 +30,5 @@
         </ul>
         <% end %>
       </div>
-    </div>
   </div>
 </div>
