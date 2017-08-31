@@ -53,13 +53,6 @@ display: inline-block;
   background: linear-gradient(to right, #EC6EAD, #3494E6);
 }
 
-.feature {
-  height: 200px;
-  border: 4px solid white;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
 fieldset {
   border: none;
   margin: 0 auto;
@@ -77,6 +70,7 @@ fieldset {
   border-radius: 10px;
   float: left;
   margin-left: 50px;
+  max-width: 350px;
 }
 
 .userleft h2 {
@@ -87,10 +81,25 @@ fieldset {
   box-sizing: border-box;
   width: 600px;
   text-align: left;
-  padding-left: 50px;
-  padding-top: 20px;
   display: inline-block;
   vertical-align: top;
+  background-color: rgb(159, 159, 159);
+  margin-top: 50px;
+}
+
+.userright nav {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.userright nav a{
+  font-size: 20px;
+}
+
+.userright nav .artworkfirst{
+  margin-right: 60px;
 }
 
 h1 {
@@ -254,4 +263,9 @@ h2 {
 }
 .viewprofile a:hover {
   color: #00d1ff;
+}
+
+.signuppic {
+  height: 100px;
+  margin-bottom: 10px;
 }

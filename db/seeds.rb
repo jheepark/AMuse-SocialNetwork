@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-u1 = User.create :name => "Bobby Bob", :email => "Bob@burgers.com", :location => "Texas", :image => "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/26/18/enhanced/webdr07/original-11566-1445900371-3.jpg?crop=734:734;127,31&downsize=715:*&output-format=auto&output-quality=auto", :password => "chicken"
-u2 = User.create :name => "Rainbow Dash", :email => "Rainbow@Dash.com", :location => "California", :image => "https://s-media-cache-ak0.pinimg.com/736x/05/73/2c/05732cb2242b178c0da8d273e6d9a15a--rainbow-dash-cake-rainbow-clothes.jpg", :password => "chicken"
+u1 = User.create :name => "Bobby Bob", :email => "Bob@burgers.com", :location => "Boston", :image => "http://res.cloudinary.com/jheepark/image/upload/v1504146620/guy_ogqstb.jpg", :password => "chicken"
+u2 = User.create :name => "Rainbow Dash", :email => "Rainbow@Dash.com", :location => "California", :image => "http://res.cloudinary.com/jheepark/image/upload/v1504146622/man_zyswvo.jpg", :password => "chicken"
 
 Photo.destroy_all
-p1 = Photo.create :image => "https://upload.wikimedia.org/wikipedia/en/7/7f/Bob%27s_Burgers_promo.png"
+p1 = Photo.create :image => "man.jpg"
 
 Artwork.destroy_all
-a1 = Artwork.create :image => "https://i.pinimg.com/736x/02/59/aa/0259aa1ae1ba2a200e2b831dee05ecc7--bob-s-bobs-burgers-art.jpg"
+a1 = Artwork.create :image => "sketch.jpg"
 a2 = Artwork.create :image => "http://vignette1.wikia.nocookie.net/mylittlepony/images/8/8f/Rainbow_Dash.png/revision/latest?cb=20130927081007&path-prefix=fr"
 
 Comment.destroy_all

@@ -10,6 +10,14 @@
   padding-bottom: 70px;
 }
 
+.profilecontainer {
+  width: 100%;
+  background: rgb(224, 217, 213);  /* fallback for old browsers */
+  height: 100%;
+  padding-bottom: 50px;
+  min-height: 800px;
+}
+
 .homeedit {
   background: #3494E6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */

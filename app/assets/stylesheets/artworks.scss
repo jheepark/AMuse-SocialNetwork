@@ -89,6 +89,8 @@ flex-wrap: wrap;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 30px;
+  max-height: 200px;
+  overflow: scroll;
 }
 
 .bin {
@@ -97,7 +99,8 @@ flex-wrap: wrap;
 }
 
 .bin:hover {
-  background-color: yellow;
+  box-sizing: border-box;
+  filter: saturate(0.1);
 }
 ul {
   margin: 0;
@@ -130,5 +133,9 @@ ul li {
 .commenting {
   width: 360px;
   margin: 10px auto;
+}
 
+.artworksprofile {
+  margin-left: 50px;
+  padding-bottom: 50px;
 }

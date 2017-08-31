@@ -9,11 +9,15 @@
 </ol>
 <% end %>
 <div class="editform">
-  <%= form_for @user do |f| %>
+  <%= form_for @user, :html => {:multipart => true} do |f| %>
+  <%= hidden_field_tag :user_id, params[:user_id]%>
   <fieldset>
     <%= f.label :image, "Profile Picture" %>
     <br>
-    <%= f.url_field :image, :placeholder => "http..." %>
+    <div class="signuppicdiv">
+      <%= image_tag "defaultpp.jpg", :class => 'signuppic' %>
+      <%= f.file_field :image %>
+    </div>
   </fieldset>
   <fieldset>
     <%= f.label :name %>

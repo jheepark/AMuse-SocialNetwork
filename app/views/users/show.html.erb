@@ -1,7 +1,9 @@
 <div class="container">
+  <div class="profilecontainer">
   <aside class= "userleft">
     <h2><%= @user.name %></h2>
-      <%= image_tag @user.image, :class =>'feature' %>
+    <div class="trial" style="background-image: url(<%=@user.image%>)">
+    </div>
         <section class="stats">
     <%= render 'shared/stats' %>
   </section>
@@ -21,22 +23,30 @@
     <% end %>
   </aside>
   <div class= "userright">
-    <h1> Artworks </h1>
-    <div class="userartworks">
-      <% @user.artworks.each do |a| %>
-        <%= link_to (image_tag a.image, :class => 'allartworksuser'), a %>
-      <% end %>
-    </div>
-
-    <h1> Photos </h1>
-      <% @user.photos.each do |p| %>
-        <%= link_to (image_tag p.image, :class => 'allphotos'), p %>
-      <% end %>
-
-      <% if @current_user.id == @user.id %>
-      <div class="upload">
-        <%= link_to "Upload Photo", new_photo_path%>
+    <nav>
+      <a href="#" class="artworkfirst">Artworks</a>
+      <a href="#">Photos</a>
+    </nav>
+    <div class="artworksprofile">
+      <h1> Artworks </h1>
+      <div class="userartworks">
+        <% @user.artworks.each do |a| %>
+          <%= link_to (image_tag a.image, :class => 'allartworksuser'), a %>
+        <% end %>
       </div>
-      <% end %>
+    </div>
+<div class="photosprofile">
+  <h1> Photos </h1>
+    <% @user.photos.each do |p| %>
+      <%= link_to (image_tag p.image, :class => 'allphotos'), p %>
+    <% end %>
+
+    <% if @current_user.id == @user.id %>
+    <div class="upload">
+      <%= link_to "Upload Photo", new_photo_path%>
+    </div>
+    <% end %>
+</div>
     </div>
 </div>
+  </div>

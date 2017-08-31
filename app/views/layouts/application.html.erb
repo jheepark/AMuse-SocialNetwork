@@ -14,7 +14,7 @@
       <nav>
 
           <%= link_to 'Home', root_path, :class => ""%>
-          <%= link_to 'Explore', artworks_path, :class => ""%>
+          <%= link_to 'Gallery', artworks_path, :class => ""%>
         <div class="right">
         <% if @current_user.present? %>
           <%= link_to 'Community', users_path %>
@@ -23,7 +23,6 @@
           <% else %>
           <%= link_to "Profile page", user_path(@current_user)%>
           <% end %>
-          <%= link_to "Edit profile", edit_user_path(@current_user)%>
           <%= link_to "Sign out #{@current_user.name}", login_path, :method => 'delete'%>
         <% else %>
         <%= link_to 'Sign up', new_user_path %>
