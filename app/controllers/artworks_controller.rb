@@ -1,4 +1,5 @@
 class ArtworksController < ApplicationController
+  before_action :check_if_logged_in, :only => [:edit, :show]
   def index
     @artworks = Artwork.all
   end

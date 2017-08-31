@@ -184,6 +184,7 @@ h3 {
   text-align: center;
   width: 200px;
   padding-left: 0;
+  margin: 0 auto;
 }
 .upload:hover {
   background: #3494E6;  /* fallback for old browsers */
@@ -192,7 +193,7 @@ h3 {
 }
 
 .upload a {
-  margin: 0;
+  margin: 0, auto;
   padding: 0;
 }
 
