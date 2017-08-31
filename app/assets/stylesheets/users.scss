@@ -35,6 +35,12 @@ a:hover {
 
 .userandinfo {
 display: inline-block;
+margin: 10px;
+transition: transform .2s ease-in-out;
+}
+
+.userandinfo:hover {
+  transform: scale(1.1);
 }
 
 .usersall {
@@ -79,12 +85,15 @@ fieldset {
 
 .userright {
   box-sizing: border-box;
-  width: 600px;
+  width: 60%;
   text-align: left;
   display: inline-block;
   vertical-align: top;
   background-color: rgb(159, 159, 159);
   margin-top: 50px;
+  margin-right: 50px;
+  height: 100%;
+  min-height: 720px;
 }
 
 .userright nav {
@@ -268,4 +277,8 @@ h2 {
 .signuppic {
   height: 100px;
   margin-bottom: 10px;
+}
+
+// community page
+.hiddenlink {
 }

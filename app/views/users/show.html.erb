@@ -25,7 +25,7 @@
   <div class= "userright">
     <nav>
       <a href="#" class="artworkfirst">Artworks</a>
-      <a href="#">Photos</a>
+      <a href="#" class="photofirst">Photos</a>
     </nav>
     <div class="artworksprofile">
       <h1> Artworks </h1>
@@ -37,6 +37,7 @@
     </div>
 <div class="photosprofile">
   <h1> Photos </h1>
+  <div class="userphotos">
     <% @user.photos.each do |p| %>
       <%= link_to (image_tag p.image, :class => 'allphotos'), p %>
     <% end %>
@@ -46,6 +47,7 @@
       <%= link_to "Upload Photo", new_photo_path%>
     </div>
     <% end %>
+  </div>
 </div>
     </div>
 </div>
