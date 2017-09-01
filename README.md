@@ -1,5 +1,8 @@
 # README
 
 WDI PROJECT 1
-Art Collab
-A social media site for artists and muses
+
+A Muse 
+A Social Media Site for Artists and Muses 
+
+https://a-muse.herokuapp.com/
