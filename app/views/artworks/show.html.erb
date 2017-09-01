@@ -27,6 +27,22 @@
         <% end %>
       </div>
     </div>
+
+    <p><%= @artwork.likes.count %> LIKES</p>
+          <% @artwork.likes.each do |like| %>
+            <% if like[:user_id] == @current_user.id %>
+              <% @alreadyLiked = true %>
+            <% end %>
+          <% end %>
+          <% if @alreadyLiked == false %>
+            <%= form_for @like do |f| %>
+              <%= hidden_field_tag :artwork_id, @artwork.id %>
+              <%= f.button "Like", :class => 'submit'%>
+            <% end %><br>
+          <% else %>
+            <%= button_to "Unlike", { :controller => "likes", :action => "destroy", :id => @artwork.id }, :method => :delete, :class => 'submit'%>
+          <% end %>
+
     <% if @current_user.present? && @current_user.id == @artwork.user_id %>
     <div class="artworkcontrols">
       <%= link_to "Edit Artwork", edit_artwork_path(@artwork)%>

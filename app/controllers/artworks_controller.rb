@@ -8,6 +8,8 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find params[:id]
     @comments = @artwork.comments
     @comment = Comment.new
+    @like = Like.new
+    @alreadyLiked = false
   end
 
   def edit
