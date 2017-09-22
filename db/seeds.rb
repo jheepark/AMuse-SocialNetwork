@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-u1 = User.create :name => "Bobby Bob", :email => "Bob@burgers.com", :location => "Boston", :image => "http://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146620/guy_ogqstb.jpg", :password => "chicken"
-u2 = User.create :name => "Kevin Smith", :email => "Kevin@Smith.com", :location => "California", :image => "http://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146622/man_zyswvo.jpg", :password => "chicken"
-u3 = User.create :name => "Sam Apple", :email => "Sam@Apple.com", :location => "Bangkok", :image => "http://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504179667/pexels-photo-91227_rcrctt.jpg", :password => "chicken"
-u4 = User.create :name => "Kim Pear", :email => "Kim@Pear.com", :location => "Russia", :image => "http://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504178484/StockSnap_6E5ZAMCKC4_ynmtfp.jpg", :password => "chicken"
+u1 = User.create :name => "Bobby Bob", :email => "Bob@burgers.com", :location => "Boston", :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146620/guy_ogqstb.jpg", :password => "chicken"
+u2 = User.create :name => "Kevin Smith", :email => "Kevin@Smith.com", :location => "California", :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146622/man_zyswvo.jpg", :password => "chicken"
+u3 = User.create :name => "Sam Apple", :email => "Sam@Apple.com", :location => "Bangkok", :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504179667/pexels-photo-91227_rcrctt.jpg", :password => "chicken"
+u4 = User.create :name => "Kim Pear", :email => "Kim@Pear.com", :location => "Russia", :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504178484/StockSnap_6E5ZAMCKC4_ynmtfp.jpg", :password => "chicken"
 
 
 Photo.destroy_all
