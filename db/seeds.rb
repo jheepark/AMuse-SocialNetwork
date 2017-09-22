@@ -6,24 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-u1 = User.create :name => "Bobby Bob", :email => "Bob@burgers.com", :location => "Boston", :image => "http://res.cloudinary.com/jheepark/image/upload/v1504146620/guy_ogqstb.jpg", :password => "chicken"
-u2 = User.create :name => "Kevin Smith", :email => "Kevin@Smith.com", :location => "California", :image => "http://res.cloudinary.com/jheepark/image/upload/v1504146622/man_zyswvo.jpg", :password => "chicken"
-u3 = User.create :name => "Sam Apple", :email => "Sam@Apple.com", :location => "Bangkok", :image => "http://res.cloudinary.com/jheepark/image/upload/v1504179667/pexels-photo-91227_rcrctt.jpg", :password => "chicken"
-u4 = User.create :name => "Kim Pear", :email => "Kim@Pear.com", :location => "Russia", :image => "http://res.cloudinary.com/jheepark/image/upload/v1504178484/StockSnap_6E5ZAMCKC4_ynmtfp.jpg", :password => "chicken"
+u1 = User.create :name => "Bobby Bob", :email => "Bob@burgers.com", :location => "Boston", :image => "http://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146620/guy_ogqstb.jpg", :password => "chicken"
+u2 = User.create :name => "Kevin Smith", :email => "Kevin@Smith.com", :location => "California", :image => "http://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146622/man_zyswvo.jpg", :password => "chicken"
+u3 = User.create :name => "Sam Apple", :email => "Sam@Apple.com", :location => "Bangkok", :image => "http://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504179667/pexels-photo-91227_rcrctt.jpg", :password => "chicken"
+u4 = User.create :name => "Kim Pear", :email => "Kim@Pear.com", :location => "Russia", :image => "http://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504178484/StockSnap_6E5ZAMCKC4_ynmtfp.jpg", :password => "chicken"
 
 
 Photo.destroy_all
-p1 = Photo.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504146619/homepageimg_yutna0.jpg"
-p2 = Photo.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504179626/pexels-photo-374871_a8utvi.jpg"
-p3 = Photo.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504178901/StockSnap_L913H85MTJ_hzlwi3.jpg"
-p4 = Photo.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504178787/StockSnap_NZNXA4KMHA_dkssoq.jpg"
+p1 = Photo.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146619/homepageimg_yutna0.jpg"
+p2 = Photo.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504179626/pexels-photo-374871_a8utvi.jpg"
+p3 = Photo.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504178901/StockSnap_L913H85MTJ_hzlwi3.jpg"
+p4 = Photo.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504178787/StockSnap_NZNXA4KMHA_dkssoq.jpg"
 
 Artwork.destroy_all
-a1 = Artwork.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504146646/sketch_hmgozb.jpg"
-a2 = Artwork.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504146619/homepageimg_yutna0.jpg"
-a3 = Artwork.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504178632/StockSnap_HAVDKM2NOT_aguj03.jpg"
-a4 = Artwork.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504178344/StockSnap_G5SBMTL1X4_rpoagr.jpg"
-a5 = Artwork.create :image => "http://res.cloudinary.com/jheepark/image/upload/v1504178657/StockSnap_1D11J46UC5_vlxnyu.jpg"
+a1 = Artwork.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146646/sketch_hmgozb.jpg"
+a2 = Artwork.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504146619/homepageimg_yutna0.jpg"
+a3 = Artwork.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504178632/StockSnap_HAVDKM2NOT_aguj03.jpg"
+a4 = Artwork.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504178344/StockSnap_G5SBMTL1X4_rpoagr.jpg"
+a5 = Artwork.create :image => "https://res.cloudinary.com/jheepark/image/upload/q_auto:low/v1504178657/StockSnap_1D11J46UC5_vlxnyu.jpg"
 
 Comment.destroy_all
 c1 = Comment.create :content => "I like beans"
