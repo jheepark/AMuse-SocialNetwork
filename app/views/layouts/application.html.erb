@@ -8,28 +8,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-
   <body>
+    <%= render 'shared/navbar' %>
     <div class="container">
-      <nav>
-
-          <%= link_to 'Home', root_path, :class => ""%>
-          <%= link_to 'Gallery', artworks_path, :class => ""%>
-        <div class="right">
-        <% if @current_user.present? %>
-          <%= link_to 'Community', users_path %>
-          <% if @current_user.image.present? %>
-          <%= link_to image_tag(@current_user.image, :class => 'thumb'), user_path(@current_user)%>
-          <% else %>
-          <%= link_to "Profile page", user_path(@current_user)%>
-          <% end %>
-          <%= link_to "Sign out #{@current_user.name}", login_path, :method => 'delete'%>
-        <% else %>
-        <%= link_to 'Sign up', new_user_path %>
-        <%= link_to 'Sign in', login_path %>
-        <% end %>
-      </div>
-      </nav>
       <%= yield %>
     </div>
     </body>

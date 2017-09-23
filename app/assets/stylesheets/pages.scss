@@ -1,14 +1,74 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//<-------------GRADIENT ON HOMEPAGE-------------->
 .home {
-  width: 100%;
   background: #3494E6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding-top: 300px;
+  height: 100vh;
+  padding-top: 47vh;
   padding-bottom: 70px;
+  width: 97vw;
 }
+//<-------------NAVBAR-------------->
+.navbar{
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 10px, 15px;
+    margin-right: 20px;
+}
+
+.navbar li{
+  border-bottom: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 15px;
+}
+
+nav a:hover {
+  border-bottom: 1px solid rgb(0, 209, 255);
+  border-bottom: 25%;
+  box-sizing: border-box;
+  color: rgb(0, 209, 255);
+}
+
+@media (max-width: 768px) {
+    nav a:hover {
+        border-bottom: none;
+    }
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #00d1ff;
+    background-color: transparent;
+}
+
+//<-------------NAVBAR END-------------->
+
+//<-------------DROPDOWN-MENU REPLACING BOOTSTRAP DEFAULT-------------->
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+  color: rgb(0, 209, 255);
+}
+#customdropdown{
+  background-color: #28282b;
+  left: 0;
+}
+
+#customdropdown a{
+  color: white;
+  padding: 15px 10px;
+}
+
+#customdropdown a:hover{
+  color: rgb(0, 209, 255);
+  background-color: transparent;
+  border: none;
+}
+//<-------------DROPDOWN-MENU REPLACING BOOTSTRAP DEFAULT END -------------->
 
 .profilecontainer {
   width: 100%;
@@ -22,26 +82,37 @@
   background: #3494E6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding-bottom: 70px;
-  padding-top: 30px;
+  padding-top: 10vh;
+  height: 100vh;
+}
+
+.signup {
+  height: 100%;
 }
 
 .homepage {
   text-align: left;
-  margin-left: 80px;
+  margin-left: 10vw;
 }
 
 .homepage h1 {
   color: white;
-  font-size: 80px;
-  margin-bottom: 20px;
+  font-size: 8vmax;
+  margin-bottom: 4vh;
+}
+
+.editprofile {
+  color: white;
+  font-size: 8.5vh;
+  margin-bottom: 4vh;
 }
 
 .homepage p{
-  font-size: 16px;
+  font-size: 3vh;
   color: white;
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: 5vh;
+  margin-right: 4vw;
 }
 
 .homepage a{
@@ -49,26 +120,6 @@
   border: 1px solid white;
   margin-top: 20px;
   padding: 10px 30px
-}
-nav {
-  background: black;
-  padding: 20px;
-  text-align: left;
-  margin-right: 0;
-  padding-bottom: 30px;
-  vertical-align: top;
-  text-align: top;
-}
-
-nav a:hover {
-  box-sizing: border-box;
-  color: rgb(0, 209, 255);
-  border-bottom: 1px solid rgb(0, 209, 255);
-  border-bottom: 25%;
-}
-
-.right {
-  float: right;
 }
 
 .frontsignup:hover {

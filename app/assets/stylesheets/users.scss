@@ -13,6 +13,7 @@ body {
   margin: 0, auto;
   color: white;
   font-family: 'Ubuntu', sans-serif;
+  height:100%;
 }
 
 .container a {
@@ -98,6 +99,36 @@ fieldset {
   border-radius: 10px;
 }
 
+@media (max-width: 1030px) {
+    .userright {
+        width: 40%;
+    }
+    .userright h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 697px) {
+    .userleft{
+        margin-left: 5%;
+    }
+    .userartworks {
+        margin: 0;
+    }
+
+    .userartworks {
+        margin: 0;
+    }
+
+    .userandinfo{
+        margin: 0;
+    }
+
+    .userright {
+        width: 300px;
+    }
+}
+
 .userright nav {
   margin: 0;
   padding: 20px;
@@ -109,14 +140,21 @@ fieldset {
 }
 
 .userright nav .artworkfirst{
-  margin-right: 60px;
+  margin-right: 6vw;
 }
 
 h1 {
- font-size: 50px;
+ font-size: 10vh;
  padding: 0, 40px;
  color: white;
  text-transform: uppercase;
+ margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .moveleft {
+        text-align: left;
+    }
 }
 
 .editform {
@@ -140,6 +178,11 @@ input {
   margin-bottom: 20px;
   color: black;
   height: 35px;
+}
+@media (max-width: 768px) {
+    input {
+        width: 80%
+    }
 }
 
 .submit {

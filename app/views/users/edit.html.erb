@@ -1,6 +1,6 @@
-<div class="homeedit">
+<div class="homeedit signup">
   <div class="blackbox">
-  <h1>Edit Profile</h1>
+  <h1 class="editprofile moveleft">Edit Profile</h1>
     <div class="editform">
       <%= form_for @user, :html => {:multipart => true} do|f| %>
       <%= hidden_field_tag :user_id, params[:user_id]%>
